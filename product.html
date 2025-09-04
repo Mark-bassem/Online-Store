@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARK | Online Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="container">
+          <a href="" class="logo"><img src="img/logo.png" alt="logo" /></a>
+
+          <form action="search.html" method="GET" class="search-box">
+            <div class="select-box">
+              <select id="category" name="category">
+                <option value="all">All Categories</option>
+                <option value="Electronics & Digital">
+                  Electronics & Digital
+                </option>
+                <option value="Phones & Tablet">Phones & Tablet</option>
+                <option value="Fashion & Clothings">Fashion & Clothings</option>
+                <option value="Television & Monitor">
+                  Television & Monitor
+                </option>
+                <option value="Jewelry & Watches">Jewelry & Watches</option>
+                <option value="Toys & Hobbies">Toys & Hobbies</option>
+              </select>
+            </div>
+
+            <input
+              type="text"
+              name="q"
+              id="search"
+              placeholder="Search for products"
+              required
+            />
+
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <div class="header-icons">
+            <div class="icon">
+              <a href="favourite.html">
+                <i class="fa-regular fa-heart"></i>
+                <span class="count count-favourite">0</span>
+              </a>
+            </div>
+
+            <div class="icon" onclick="open_close_cart()">
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="count count-item-header">0</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-header">
+        <div class="container">
+          <nav class="nav">
+            <span class="open_menu" onclick="openMenu()"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+
+            <div class="category-nav">
+              <div class="category-btn" onclick="OpenCategoryList()">
+                <i class="fa-solid fa-bars"></i>
+                <p>Browse Category</p>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+
+              <div class="category_nav_list">
+                <a href="category.html?cat=Electronics%20%26%20Digital">
+                  Electronics & Digital
+                </a>
+                <a href="category.html?cat=Phones%20%26%20Tablet">
+                  Phones & Tablet
+                </a>
+                <a href="category.html?cat=Fashion%20%26%20Clothings">
+                  Fashion & Clothings
+                </a>
+                <a href="category.html?cat=Television%20%26%20Monitor">
+                  Television & Monitor
+                </a>
+                <a href="category.html?cat=Jewelry%20%26%20Watches">
+                  Jewelry & Watches
+                </a>
+                <a href="category.html?cat=Toys%20%26%20Hobbies">
+                  Toys & Hobbies
+                </a>
+              </div>
+            </div>
+
+            <ul class="nav_links">
+              <span class="close_menu" onclick="openMenu()"
+                ><i class="fa-regular fa-circle-xmark"></i
+              ></span>
+
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="login-signup btns">
+            <a href="login.html" class="btn"
+              >Login <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></a>
+            <a href="signup.html" class="btn"
+              >Sign-up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="cart">
+      <div class="top_cart">
+        <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+        <span class="close_cart" onclick="open_close_cart()"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+
+      <div class="items_in_cart" id="cart_items"></div>
+
+      <div class="bottom_cart">
+        <div class="total">
+          <p>Subtotal</p>
+          <p class="price_cart_total">0$</p>
+        </div>
+
+        <div class="button_cart">
+          <a href="checkout.html" class="btn_cart btn">Checkout</a>
+          <span class="btn_cart trans_bg btn" onclick="open_close_cart()"
+            >Shop More</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <main class="container">
+      <section id="product-details" class="product-details">
+        <!-- هيتم جلب تفاصيل المنتج هنا -->
+      </section>
+    </main>
+
+    <aside class="cart">
+      <h2>Your Cart</h2>
+      <div id="cart_items" class="cart_items"></div>
+      <div class="cart_footer">
+        <p>Total: <span class="price_cart_total">0$</span></p>
+        <p>Items: <span class="Count_item_cart">0</span></p>
+        <button class="checkout_btn">Checkout</button>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="container">
+        <div class="big_row">
+          <img src="img/white_logo.jpeg" alt="" class="logo_footer" />
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, veritatis.
+          </p>
+
+          <div class="icons_footer">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Find it fast</h4>
+
+          <div class="links">
+            <a href="category.html?cat=Electronics%20%26%20Digital"
+              ><i class="fa-solid fa-caret-right"></i> Laptops & Computers</a
+            >
+            <a href="category.html?cat=Phones%20%26%20Tablet"
+              ><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a
+            >
+            <a href="category.html?cat=Television%20%26%20Monitor"
+              ><i class="fa-solid fa-caret-right"></i> TV & Audio</a
+            >
+            <a href="category.html?cat=Fashion%20%26%20Clothings"
+              ><i class="fa-solid fa-caret-right"></i> Appliances</a
+            >
+            <a href="category.html?cat=Jewelry%20%26%20Watches"
+              ><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Quick Links</h4>
+
+          <div class="links">
+            <a href="account.html"
+              ><i class="fa-solid fa-caret-right"></i> Your Account
+            </a>
+            <a href="returns.html"
+              ><i class="fa-solid fa-caret-right"></i> Returns & Exchanges
+            </a>
+            <a href="shipping.html"
+              ><i class="fa-solid fa-caret-right"></i> Shipping & Delivery
+            </a>
+            <a href="delivery.html"
+              ><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time
+            </a>
+            <a href="purchase-history.html"
+              ><i class="fa-solid fa-caret-right"></i> Purchase History
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Service us</h4>
+
+          <div class="links">
+            <a href="support.html"
+              ><i class="fa-solid fa-caret-right"></i> Support Center
+            </a>
+            <a href="terms.html"
+              ><i class="fa-solid fa-caret-right"></i> Term & Conditions
+            </a>
+            <a href="privacy.html"
+              ><i class="fa-solid fa-caret-right"></i> Privacy & Policy
+            </a>
+            <a href="help.html"><i class="fa-solid fa-caret-right"></i> Help </a>
+            <a href="faqs.html"><i class="fa-solid fa-caret-right"></i> FAQS </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_footer">
+        <div class="container">
+          <p>&copy; <span>MARK Store.</span> All Rights Reserved.</p>
+
+          <div class="payment_img">
+            <img src="img/payment_method.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

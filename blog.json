@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Top 10 Tech Gadgets to Look Out for in 2025",
+    "image": "img/blog/tech-gadgets.jpg",
+    "author": "Mark Bassem",
+    "date": "2025-01-15",
+    "category": "Technology",
+    "excerpt": "From foldable phones to AI-powered assistants, here are the must-have gadgets that will define 2025.",
+    "content": "Technology in 2025 is shaping the way we live and work. This year we expect foldable smartphones to become mainstream, AI to power personal assistants more effectively, and smart wearables to help monitor health in real-time. Brands like Samsung, Apple, and Xiaomi are leading innovations that will soon become essential in everyday life..."
+  },
+  {
+    "id": 2,
+    "title": "Fashion Trends for Spring 2025",
+    "image": "img/blog/fashion-trends.jpg",
+    "author": "Sarah Ali",
+    "date": "2025-02-02",
+    "category": "Fashion",
+    "excerpt": "Bright colors, oversized blazers, and sustainable fabrics are leading this season’s trends.",
+    "content": "Spring 2025 is all about vibrant self-expression. Expect to see oversized blazers dominating the streets, along with bold neon shades. Eco-friendly fabrics are not just a trend but a necessity as sustainability becomes central to the fashion world. Brands are pushing collections made of recycled and organic materials..."
+  },
+  {
+    "id": 3,
+    "title": "Why Smart TVs Are the Future of Home Entertainment",
+    "image": "img/blog/smart-tv.jpg",
+    "author": "Omar Hassan",
+    "date": "2025-02-10",
+    "category": "Electronics",
+    "excerpt": "Smart TVs are no longer a luxury but a necessity for modern homes. Here’s why.",
+    "content": "With streaming platforms dominating entertainment, Smart TVs provide seamless access to Netflix, Disney+, and YouTube. Features like voice assistants, built-in gaming, and 4K resolution are now standard. In 2025, integration with smart homes makes Smart TVs the central hub for family entertainment..."
+  },
+  {
+    "id": 4,
+    "title": "Best Smartphones of 2025: Flagship Comparison",
+    "image": "img/blog/smartphones.jpg",
+    "author": "Lina Mohamed",
+    "date": "2025-02-18",
+    "category": "Mobiles",
+    "excerpt": "We compared the top flagship smartphones of 2025 to help you decide which one is worth your money.",
+    "content": "The smartphone industry in 2025 is competitive with leading models from Apple, Samsung, Xiaomi, and Oppo. Apple’s iPhone 17 Pro Max introduces revolutionary AI-driven photography, while Samsung’s Galaxy Z Fold6 redefines multitasking with improved durability. Xiaomi continues to dominate with affordable yet powerful flagships..."
+  },
+  {
+    "id": 5,
+    "title": "How to Build a Productive Home Office",
+    "image": "img/blog/home-office.jpg",
+    "author": "Ahmed Youssef",
+    "date": "2025-02-22",
+    "category": "Lifestyle",
+    "excerpt": "Remote work is here to stay. Here’s how to create the perfect home office setup.",
+    "content": "A productive home office requires a balance of comfort and functionality. Invest in an ergonomic chair, a height-adjustable desk, and good lighting. Tech essentials like dual monitors and noise-canceling headphones make multitasking smoother. Plants and decor can enhance mood and creativity..."
+  }
+]

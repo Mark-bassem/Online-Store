@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARK | Online Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="top-header">
+        <div class="container">
+          <a href="" class="logo"><img src="img/logo.png" alt="logo" /></a>
+
+          <form action="search.html" method="GET" class="search-box">
+            <div class="select-box">
+              <select id="category" name="category">
+                <option value="all">All Categories</option>
+                <option value="Electronics & Digital">
+                  Electronics & Digital
+                </option>
+                <option value="Phones & Tablet">Phones & Tablet</option>
+                <option value="Fashion & Clothings">Fashion & Clothings</option>
+                <option value="Television & Monitor">
+                  Television & Monitor
+                </option>
+                <option value="Jewelry & Watches">Jewelry & Watches</option>
+                <option value="Toys & Hobbies">Toys & Hobbies</option>
+              </select>
+            </div>
+
+            <input
+              type="text"
+              name="q"
+              id="search"
+              placeholder="Search for products"
+              required
+            />
+
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+          <div class="header-icons">
+            <div class="icon">
+              <a href="favourite.html">
+                <i class="fa-regular fa-heart"></i>
+                <span class="count count-favourite">0</span>
+              </a>
+            </div>
+
+            <div class="icon" onclick="open_close_cart()">
+              <a href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="count count-item-header">0</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-header">
+        <div class="container">
+          <nav class="nav">
+            <span class="open_menu" onclick="openMenu()"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
+
+            <div class="category-nav">
+              <div class="category-btn" onclick="OpenCategoryList()">
+                <i class="fa-solid fa-bars"></i>
+                <p>Browse Category</p>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+
+              <div class="category_nav_list">
+                <a href="category.html?cat=Electronics%20%26%20Digital">
+                  Electronics & Digital
+                </a>
+                <a href="category.html?cat=Phones%20%26%20Tablet">
+                  Phones & Tablet
+                </a>
+                <a href="category.html?cat=Fashion%20%26%20Clothings">
+                  Fashion & Clothings
+                </a>
+                <a href="category.html?cat=Television%20%26%20Monitor">
+                  Television & Monitor
+                </a>
+                <a href="category.html?cat=Jewelry%20%26%20Watches">
+                  Jewelry & Watches
+                </a>
+                <a href="category.html?cat=Toys%20%26%20Hobbies">
+                  Toys & Hobbies
+                </a>
+              </div>
+            </div>
+
+            <ul class="nav_links">
+              <span class="close_menu" onclick="openMenu()"
+                ><i class="fa-regular fa-circle-xmark"></i
+              ></span>
+
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li class="active"><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="login-signup btns">
+            <a href="login.html" class="btn"
+              >Login <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></a>
+            <a href="signup.html" class="btn"
+              >Sign-up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact-section container">
+      <div class="contact-info">
+        <div class="info-box">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Our Address</h3>
+          <p>123 Main Street, Cairo, Egypt</p>
+        </div>
+
+        <div class="info-box">
+          <i class="fa-solid fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>
+            <a href="mailto:support@markstore.com">support@markstore.com</a>
+          </p>
+        </div>
+
+        <div class="info-box">
+          <i class="fa-solid fa-phone"></i>
+          <h3>Call Us</h3>
+          <p>+20 123 456 789</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <p id="formMessage" class="form-message"></p>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.179361629706!2d31.235711!3d30.044419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c1c1f4e3e9%3A0x8c5f1a2bfb62f4c!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1690000000000!5m2!1sen!2seg"
+        class="map-frame"
+        title="Map showing Cairo, Egypt"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="big_row">
+          <img src="img/white_logo.jpeg" alt="" class="logo_footer" />
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, veritatis.
+          </p>
+
+          <div class="icons_footer">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Find it fast</h4>
+
+          <div class="links">
+            <a href="category.html?cat=Electronics%20%26%20Digital"
+              ><i class="fa-solid fa-caret-right"></i> Laptops & Computers</a
+            >
+            <a href="category.html?cat=Phones%20%26%20Tablet"
+              ><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a
+            >
+            <a href="category.html?cat=Television%20%26%20Monitor"
+              ><i class="fa-solid fa-caret-right"></i> TV & Audio</a
+            >
+            <a href="category.html?cat=Fashion%20%26%20Clothings"
+              ><i class="fa-solid fa-caret-right"></i> Appliances</a
+            >
+            <a href="category.html?cat=Jewelry%20%26%20Watches"
+              ><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Quick Links</h4>
+
+          <div class="links">
+            <a href="account.html"
+              ><i class="fa-solid fa-caret-right"></i> Your Account
+            </a>
+            <a href="returns.html"
+              ><i class="fa-solid fa-caret-right"></i> Returns & Exchanges
+            </a>
+            <a href="shipping.html"
+              ><i class="fa-solid fa-caret-right"></i> Shipping & Delivery
+            </a>
+            <a href="delivery.html"
+              ><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time
+            </a>
+            <a href="purchase-history.html"
+              ><i class="fa-solid fa-caret-right"></i> Purchase History
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Service us</h4>
+
+          <div class="links">
+            <a href="support.html"
+              ><i class="fa-solid fa-caret-right"></i> Support Center
+            </a>
+            <a href="terms.html"
+              ><i class="fa-solid fa-caret-right"></i> Term & Conditions
+            </a>
+            <a href="privacy.html"
+              ><i class="fa-solid fa-caret-right"></i> Privacy & Policy
+            </a>
+            <a href="help.html"
+              ><i class="fa-solid fa-caret-right"></i> Help
+            </a>
+            <a href="faqs.html"
+              ><i class="fa-solid fa-caret-right"></i> FAQS
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_footer">
+        <div class="container">
+          <p>&copy; <span>MARK Store.</span> All Rights Reserved.</p>
+
+          <div class="payment_img">
+            <img src="img/payment_method.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
